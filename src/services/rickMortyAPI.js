@@ -10,3 +10,11 @@ export const fetchRequest = async () => {
     return data;
     
 };
+
+export const fetchOneCharacter = async (id) => {
+    const res = await fetch(`${URL}/${id}`);
+
+    const desiredCharacter = await res.json();
+     
+    return desiredCharacter;
+}
