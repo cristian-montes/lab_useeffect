@@ -16,5 +16,5 @@
 //     },[]); // second argument '[]'is passed to only activate this hook on the first render.
 
 //     return {loading, characters}
-};
+// };
 

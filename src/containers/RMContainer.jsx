@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CharacterList from '../components/CharacterList';
 import { fetchRequest } from "../services/rickMortyAPI";
 
 
@@ -9,10 +10,12 @@ const RickMortyContainer = () => {
     useEffect(() => {
        const charactersData = async () => {
          const data = await fetchRequest();
+
          setCharacters(data);
          setLoading(false);
+         console.log(characters)
        } 
-        charactersData();
+       charactersData();
 
     },[]); 
 
@@ -21,7 +24,10 @@ const RickMortyContainer = () => {
                 {loading? (<h1>Loading...</h1>)
                     :(
                     <div>
-                        <h1 characters={characters}>HOLA</h1>
+                        <CharacterList
+                            loading={loading}
+                            characters={characters}
+                        />
                     </div>
                 )}           
             </div>
