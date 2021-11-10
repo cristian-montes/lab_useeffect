@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 const Character = ({id, name, gender, image, origin, status, species}) => {
     return(
@@ -10,6 +11,12 @@ const Character = ({id, name, gender, image, origin, status, species}) => {
             </Link>
         </div>
     )
+}
+
+Character.propTypes ={
+    id:  PropTypes.string.isRequired,
+    name:  PropTypes.string.isRequired,
+    image:  PropTypes.string.isRequired,
 }
 
 export default Character;

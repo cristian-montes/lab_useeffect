@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useParams} from 'react';
+import { Link } from 'react-router-dom';
 import { fetchOneCharacter } from '../services/rickMortyAPI';
 
 
@@ -31,6 +32,12 @@ const DetailsContainer = (props) => {
                 :
             <div>
                 <img src={oneCharacter.image} alt={oneCharacter.name} />
+                <p>{oneCharacter.name}</p>
+                <p>{oneCharacter.status}</p>
+                <p>{oneCharacter.species}</p>
+                <p>Location: {oneCharacter.origin.name}</p>
+                <Link to="/"><button>Go back </button></Link>
+                
             </div>
         }
         </div>

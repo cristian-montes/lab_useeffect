@@ -15,6 +15,6 @@ export const fetchOneCharacter = async (id) => {
     const res = await fetch(`${URL}/${id}`);
 
     const desiredCharacter = await res.json();
-     console.log('data', desiredCharacter)
+     
     return desiredCharacter;
 }

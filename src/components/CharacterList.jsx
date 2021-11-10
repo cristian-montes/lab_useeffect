@@ -1,5 +1,6 @@
 import React from 'react'
 import Character from './Character';
+import PropTypes from 'prop-types'
 
 
 const CharacterList = ({loading, characters}) => {
@@ -29,5 +30,11 @@ const CharacterList = ({loading, characters}) => {
         </div>
     )
 }
+
+CharacterList.propTypes = { 
+    characters: PropTypes.array.isRequired,
+    loading: PropTypes.bool.isRequired
+}
+
 
 export default CharacterList;
