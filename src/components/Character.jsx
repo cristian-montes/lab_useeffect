@@ -5,8 +5,8 @@ const Character = ({id, name, gender, image, origin, status, species}) => {
     return(
         <div>
             <Link to={`/details/${id}`}>
-            <img src={image} alt={id}/>
-            <p>{name}</p>
+                <img src={image} alt={id}/>
+                <p>{name}</p>
             </Link>
         </div>
     )

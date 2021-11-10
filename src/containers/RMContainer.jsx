@@ -13,7 +13,7 @@ const RickMortyContainer = () => {
 
          setCharacters(data);
          setLoading(false);
-         console.log(characters)
+        
        } 
        charactersData();
 

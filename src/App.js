@@ -1,15 +1,25 @@
 import './App.css';
 import RickMortyContainer from './containers/RMContainer';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import DetailsContainer from './containers/DetailsContainer';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Routes>
-          <Route path="/" element={<RickMortyContainer/>}/>
-          {/* <Route path="/details/:id" element={} /> */}
-       </Routes>
+        <Switch>
+          <Route 
+            path="/" 
+            exact
+            render={(routerProps) => <RickMortyContainer {...routerProps}/>}
+          />
+          <Route 
+            path="/details/:id" 
+            exact
+            render={(routerProps) => <DetailsContainer {...routerProps}/>}
+
+          />
+       </Switch>
       </Router>
     </div>
   );
